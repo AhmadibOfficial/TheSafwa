@@ -1,6 +1,6 @@
 # The Safwa
 
-A five-page presentation website based on the approved Safwa brief and supplied brand imagery.
+The Safwa website — Institute, Studios, Quran and community.
 
 ## Pages
 

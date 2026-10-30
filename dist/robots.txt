@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thesafwa.onrender.com/sitemap.xml

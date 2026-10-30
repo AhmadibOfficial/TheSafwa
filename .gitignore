@@ -1,0 +1,5 @@
+.openai/preview/
+node_modules/
+__pycache__/
+*.zip
+qa-*.html

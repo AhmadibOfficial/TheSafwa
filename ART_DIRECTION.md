@@ -8,21 +8,21 @@ Warm cream, muted olive, navy within the Institute logo, forest green for Studio
 
 ## Supplied assets
 
-Original user attachments are copied byte-for-byte. Viewport crops in SVG/CSS hide screenshot interface chrome without altering the source files or redrawing the logos.
+The enhanced user attachments supplied for launch are copied byte-for-byte, without image recompression. Viewport crops in SVG/CSS hide screenshot interface chrome without altering the source files or redrawing the logos.
 
 | Website asset | Supplied attachment | Use |
 | --- | --- | --- |
-| `dist/assets/the-safwa-logo.jpg` | `photo_2026-10-30_05-50-20 (2).jpg` | Parent wordmark in header; source retained in full |
-| `dist/assets/institute-logo.jpg` | `photo_2026-10-30_05-50-20.jpg` | Institute brand identity |
-| `dist/assets/studios-brand.jpg` | `photo_2026-10-30_05-50-18.jpg` | Original Studios logo and dark visual identity |
-| `dist/assets/white-horse.jpg` | `photo_2026-10-30_05-50-18 (2).jpg` | Main brand photograph |
-| `dist/assets/institute-atmosphere.jpg` | `photo_2026-10-30_05-50-13.jpg` | Text-free window onto the supplied coffee and flowers image |
+| `dist/assets/the-safwa-logo-hd.jpg` | `image (2)(1).jpg` | Parent wordmark in header; source retained in full |
+| `dist/assets/institute-logo-hd.jpg` | `image(1).jpg` | Institute brand identity |
+| `dist/assets/studios-brand-hd.jpg` | `image (3)(1).jpg` | Original Studios logo and dark visual identity |
+| `dist/assets/white-horse-hd.jpg` | `image (1)(1).jpg` | Main brand photograph |
+| `dist/assets/institute-atmosphere-hd.jpg` | `image (4)(1).jpg` | Text-free window onto the supplied coffee and flowers image |
 
 The personal social screenshot and Arabic name artwork are not included. The window scene and horse express the supplied visual direction and do not represent verified Institute premises. The book graphic is a CSS project-identity illustration, not an application screenshot or Quran text.
 
 ## Content and contact
 
-The Institute mission and vision are preserved verbatim from the supplied brand images. No courses, fees, application dates, testimonials, staff identities or audience numbers were invented. The Instagram accounts and WhatsApp community invitation are supplied by the user. General enquiries route to @thesafwa_; Studios and Quran enquiries route to @safwa.studios; learning, admissions and community questions route to @safwa.institute. The community invitation is presented separately and opens WhatsApp for the visitor to choose whether to join. No scholarship or download links were invented.
+The Institute mission and vision are preserved verbatim from the supplied brand images. No courses, fees, application dates, testimonials, staff identities or audience numbers were invented. The Instagram accounts and WhatsApp and Telegram community invitations are supplied by the user. General enquiries route to @thesafwa_; Studios and Quran enquiries route to @safwa.studios; learning, admissions and community questions route to @safwa.institute. The community invitations are presented separately and open WhatsApp or Telegram for the visitor to choose whether to join. No scholarship or download links were invented.
 
 Safwa Quran is explicitly in development, with no download link or unverified feature claims. No existing Safwa Quran repository or other project was changed.
 

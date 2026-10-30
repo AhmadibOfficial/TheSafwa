@@ -16,4 +16,6 @@ Run `python scripts/build.py`. Publish the `dist` directory. No dependency insta
 
 The enquiry form copies a message for the visitor to paste and send through Instagram. It does not send or store information. Admissions, scholarship applications and member accounts are outside this first version.
 
+The Connect page and shared footer include the approved WhatsApp and Telegram invitations. The five enhanced brand images are preserved byte-for-byte from the supplied JPEGs; SVG viewports frame the existing images without recompressing them.
+
 See [ART_DIRECTION.md](ART_DIRECTION.md) for asset provenance, content constraints and the design rationale.

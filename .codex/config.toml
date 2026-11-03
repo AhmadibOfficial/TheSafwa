@@ -1,0 +1,7 @@
+# Conservative project defaults, subject to the installed Codex client honoring
+# trusted project configuration. Also use an OS/container-level sandbox.
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+[sandbox_workspace_write]
+network_access = false

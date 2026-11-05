@@ -1,0 +1,140 @@
+/* Institutional pages and the local editorial workspace. */
+.platform-heading { padding-block: clamp(55px, 8vw, 108px) 48px; border-bottom: 1px solid var(--line); }
+.platform-heading h1 { max-width: 880px; margin: 18px 0 24px; font-size: clamp(55px, 8.5vw, 112px); }
+.platform-lede { max-width: 55ch; color: var(--muted); font-size: clamp(16px, 2vw, 21px); line-height: 1.6; }
+.platform-section { padding-block: clamp(44px, 6vw, 85px); border-bottom: 1px solid var(--line); }
+.platform-section h2, .platform-article h2 { font-size: clamp(40px, 5vw, 66px); margin-bottom: 26px; }
+.platform-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 22px; }
+.platform-card { min-width: 0; border: 1px solid var(--line); background: #efebe0; }
+.platform-card img { display: block; width: 100%; max-height: 205px; object-fit: cover; aspect-ratio: 2; }
+.platform-card-copy { padding: clamp(22px, 3.5vw, 36px); }
+.platform-card h3 { font-size: clamp(29px, 4vw, 41px); line-height: 1.05; margin: 12px 0; }
+.platform-card h3 a:hover, .platform-prose a:hover { text-decoration: underline; }
+.platform-card p, .platform-empty, .platform-prose p, .platform-callout p { line-height: 1.65; }
+.platform-card p:not(.eyebrow), .platform-empty, .platform-prose p { color: var(--muted); }
+.platform-prose p { max-width: 66ch; margin: 0 0 20px; }
+.platform-prose p + h2 { margin-top: 34px; }
+.platform-prose a:not(.text-link) { text-decoration: underline; text-underline-offset: .2em; }
+.platform-article { padding-block: 36px 75px; }
+.platform-article-media img, .platform-prose img { display: block; width: min(100%, 420px); margin-block: 16px 28px; }
+.platform-article .platform-prose { margin-top: 24px; }
+.platform-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-block: 16px; }
+.platform-actions .text-link { margin: 0; min-width: min(100%, 160px); }
+.platform-callout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.platform-world { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.platform-world .world-card { min-width: 0; }
+.platform-home .hero-copy > p:not(.eyebrow) { max-width: 36ch; }
+body[data-theme="studio"] .platform-card { background: #193b31; border-color: #416257; }
+body[data-theme="studio"] .platform-card p:not(.eyebrow),
+body[data-theme="studio"] .platform-prose p { color: #dfdfcc; }
+body[data-theme="studio"] .platform-section { border-color: #416257; }
+
+.editor-masthead { padding: 20px max(18px, 5vw); background: #142e26; color: #faf6e9; display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; align-items: center; }
+.editor-masthead a:first-child { font: 600 28px var(--serif); }
+.editor-masthead span { color: #e0c88a; margin-left: 6px; }
+.editor-masthead a:last-child { font-size: 13px; text-decoration: underline; }
+.editor-wrap { width: min(calc(100% - 36px), 1040px); margin: 0 auto; padding-bottom: 60px; }
+.editor-foot { border-top: 1px solid var(--line); padding: 22px; text-align: center; color: var(--muted); font-size: 13px; }
+.editor-toolbar, .editor-toolbar nav, .editor-toolbar div { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.editor-toolbar { justify-content: space-between; padding-block: 16px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.editor-toolbar a, .editor-plain, .editor-heading a { text-decoration: underline; text-underline-offset: .2em; }
+.editor-plain { border: 0; padding: 5px 0; color: inherit; background: transparent; cursor: pointer; }
+.editor-heading { padding-block: 34px 26px; }
+.editor-wrap h1 { font-size: clamp(44px, 7vw, 72px); margin: 10px 0 14px; overflow-wrap: anywhere; }
+.editor-wrap h2 { font-size: clamp(30px, 4.5vw, 42px); margin-bottom: 12px; overflow-wrap: anywhere; }
+.editor-wrap h3 { font-size: 30px; }
+.editor-wrap p { line-height: 1.55; }
+.editor-panel { padding: clamp(18px, 4vw, 36px); background: #fffdf7; border: 1px solid var(--line); }
+.editor-login { max-width: 530px; margin: 48px auto 0; }
+.editor-form { max-width: 780px; }
+.editor-wrap form label { display: block; font-weight: 600; margin-top: 19px; margin-bottom: 6px; }
+.editor-wrap form input:not([type="hidden"]), .editor-wrap form textarea, .editor-wrap form select {
+  display: block; width: 100%; border: 1px solid #938c78; background: #fffdf7; border-radius: 3px;
+  padding: 10px 11px; color: var(--ink); font: inherit; min-height: 43px;
+}
+.editor-wrap textarea { resize: vertical; }
+.editor-wrap .button { margin-top: 18px; }
+.editor-notice { padding: 14px; background: #f8e6db; border-left: 3px solid #923d27; margin: 12px 0; color: #5b2a21; }
+.editor-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.editor-chip { display: inline-block; padding: 7px 10px; border: 1px solid #aba38e; font-size: 13px; line-height: 1.35; }
+.editor-chip[aria-current="page"], a.editor-chip:hover { background: #142e26; color: #fffdf7; }
+.editor-filters { margin-bottom: 16px; }
+.editor-records, .editor-history { padding: 0; margin: 0; list-style: none; }
+.editor-records li { padding: 16px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; }
+.editor-records h2 { font-size: 30px; margin: 5px 0 0; }
+.editor-records li > div { min-width: 0; }
+.editor-records li > div:last-child { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 13px; }
+.editor-records a:hover { text-decoration: underline; }
+.editor-section { margin-top: 24px; overflow-wrap: anywhere; }
+.editor-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+.editor-revision, .editor-history li { padding: 12px 0; border-top: 1px solid var(--line); }
+.editor-revision summary { cursor: pointer; font-weight: 600; }
+.editor-revision p, .editor-history span { display: block; margin-top: 7px; }
+.editor-history span { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 980px) {
+  .desktop-nav { gap: 15px; }
+}
+@media (max-width: 800px) {
+  .platform-world, .platform-callout { grid-template-columns: 1fr; }
+  .mobile-nav { overflow-y: auto; padding-block: 22px; transition-property: opacity, transform; }
+  .mobile-nav > a { flex-shrink: 0; padding-block: 12px; font-size: clamp(32px, 6vw, 42px); }
+}
+@media (max-width: 420px) {
+  .platform-heading h1 { font-size: 49px; }
+  .platform-heading, .platform-article, .editor-wrap { overflow-wrap: anywhere; }
+}
+
+/* Institutional narrative, based on the Safwa philosophy. */
+.institution-hero { display: grid; grid-template-columns: 1.18fr .82fr; align-items: center; gap: 6%; padding-block: 65px 80px; }
+.institution-hero > * { min-width: 0; }
+.institution-hero h1 { font-size: clamp(58px, 6.8vw, 98px); line-height: .97; margin: 30px 0; letter-spacing: -.045em; }
+.institution-hero em { color: var(--olive); }
+.institution-lede { max-width: 56ch; margin-top: 22px; font-size: clamp(17px, 1.6vw, 22px); color: var(--muted); line-height: 1.65; }
+.institution-hero-image img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.institution-hero-image figcaption { margin-top: 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
+.institution-philosophy, .institution-ecosystem, .institution-section, .institution-longview,
+.institution-invite, .institution-quiet, .institution-story, .institution-concept {
+  padding-block: clamp(48px, 7vw, 100px); border-top: 1px solid var(--line);
+}
+.institution-philosophy h2, .institution-ecosystem h2, .institution-longview h2,
+.institution-invite h2, .institution-story h2 { font-size: clamp(45px, 5.7vw, 80px); line-height: 1.05; margin-top: 20px; }
+.institution-section h2, .institution-concept h2, .institution-quiet h2 { font-size: clamp(36px, 4.7vw, 62px); line-height: 1.12; margin: 18px 0; }
+.institution-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 28px; margin-top: 42px; }
+.institution-areas article { border-top: 1px solid var(--line); padding-top: 22px; }
+.institution-areas h3 { font-size: 32px; line-height: 1.15; margin-bottom: 14px; }
+.institution-areas p, .institution-section > p, .institution-division p, .institution-longview > p:not(.eyebrow),
+.institution-invite > p:not(.eyebrow), .institution-quiet > p:not(.eyebrow), .institution-concept > p:not(.eyebrow),
+.institution-upcoming p:not(.eyebrow) { max-width: 62ch; color: var(--muted); line-height: 1.7; }
+.institution-statement { max-width: 39ch; margin-top: 50px; font: 38px/1.35 var(--serif); }
+.institution-division { margin-top: 42px; display: grid; grid-template-columns: 1fr 1fr; gap: 7%; padding-block: 30px; border-top: 1px solid var(--line); }
+.institution-division h3, .institution-division h2 { font-size: clamp(35px, 4.6vw, 62px); line-height: 1.05; margin-top: 15px; }
+.institution-upcoming { margin-top: 28px; padding: 24px 0 0; border-top: 1px solid var(--line); }
+.institution-upcoming .eyebrow { margin-bottom: 14px; }
+.institution-longview { background: #e9ebdf; margin-inline: 0; padding-inline: var(--gutter); }
+.institution-longview > p:not(.eyebrow), .institution-invite > p:not(.eyebrow) { margin-top: 24px; }
+.institution-story { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; }
+.institution-story h3 { font-size: 34px; margin-top: 30px; }
+body[data-theme="studio"] .institution-areas p,
+body[data-theme="studio"] .institution-quiet > p:not(.eyebrow),
+body[data-theme="studio"] .institution-section > p,
+body[data-theme="studio"] .institution-lede,
+body[data-theme="studio"] .institution-concept > p:not(.eyebrow) { color: #dfdfcc; }
+body[data-theme="studio"] .institution-section,
+body[data-theme="studio"] .institution-concept,
+body[data-theme="studio"] .institution-quiet,
+body[data-theme="studio"] .institution-areas article { border-color: #45604f; }
+.contact-channel > .text-link { overflow-wrap: anywhere; min-width: 0; }
+@media (max-width: 800px) {
+  .institution-hero { grid-template-columns: 1fr; padding-block: 40px 55px; gap: 35px; }
+  .institution-hero h1 { font-size: clamp(56px, 10vw, 86px); }
+  .institution-hero-image img { max-height: 420px; object-position: center 45%; }
+  .institution-story, .institution-division { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (max-width: 420px) {
+  .institution-hero h1 { font-size: 56px; }
+  .institution-philosophy h2, .institution-ecosystem h2 { font-size: 45px; }
+  .institution-statement { font-size: 31px; }
+}
+.review-command { white-space: pre-wrap; overflow-wrap: anywhere; padding: 22px; background: #efebe0; margin-block: 24px; }
+.review-command code { color: #23372e; }

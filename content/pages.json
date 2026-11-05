@@ -1,0 +1,90 @@
+[
+  {
+    "path": "/",
+    "fragment": "home.html",
+    "title": "Building institutions for a flourishing future | The Safwa",
+    "description": "The Safwa is an institution for faith, knowledge, human development, creativity, media and technology.",
+    "page": "home",
+    "theme": "",
+    "aliases": []
+  },
+  {
+    "path": "/about",
+    "fragment": "about.html",
+    "title": "About | The Safwa",
+    "description": "The purpose, philosophy and long-term vision of The Safwa, founded by Khadija Sabiu.",
+    "page": "about",
+    "theme": "",
+    "aliases": []
+  },
+  {
+    "path": "/institute",
+    "fragment": "institute.html",
+    "title": "Safwa Institute | The Safwa",
+    "description": "Safwa Institute brings education, knowledge, research and community together through faith-centred learning.",
+    "page": "institute",
+    "theme": "",
+    "aliases": []
+  },
+  {
+    "path": "/studios",
+    "fragment": "studios.html",
+    "title": "Safwa Studios | The Safwa",
+    "description": "Safwa Studios gives ideas form through media, publishing, products and technology.",
+    "page": "studios",
+    "theme": "studio",
+    "aliases": []
+  },
+  {
+    "path": "/studios/quran",
+    "fragment": "quran.html",
+    "title": "Safwa Quran | The Safwa",
+    "description": "Safwa Quran is a project in development within Safwa Studios, centred on the Qur’an, reflection and daily practice.",
+    "page": "studios",
+    "theme": "",
+    "aliases": [
+      "quran.html"
+    ]
+  },
+  {
+    "path": "/portfolio",
+    "fragment": "portfolio.html",
+    "title": "Portfolio | The Safwa",
+    "description": "Explore Safwa Institute, Safwa Studios and the directions taking shape within The Safwa.",
+    "page": "work",
+    "theme": "",
+    "aliases": [
+      "work.html",
+      "work/index.html"
+    ]
+  },
+  {
+    "path": "/journal",
+    "fragment": "journal.html",
+    "title": "From Safwa | The Safwa",
+    "description": "From Safwa is a space for the institution’s essays, reflections and research.",
+    "page": "journal",
+    "theme": "",
+    "aliases": []
+  },
+  {
+    "path": "/opportunities",
+    "fragment": "opportunities.html",
+    "title": "Build With Us | The Safwa",
+    "description": "Explore ways to contribute to The Safwa through knowledge, creativity, technology, partnership and service.",
+    "page": "opportunities",
+    "theme": "",
+    "aliases": []
+  },
+  {
+    "path": "/contact",
+    "fragment": "contact.html",
+    "title": "Contact The Safwa | The Safwa",
+    "description": "Reach the relevant Safwa team for institutional, Institute, Studios and partnership enquiries.",
+    "page": "contact",
+    "theme": "",
+    "aliases": [
+      "connect.html"
+    ]
+  }
+]

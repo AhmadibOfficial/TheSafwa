@@ -1,21 +1,17 @@
 # The Safwa
 
-The Safwa website — Institute, Studios, Quran and community.
+The Safwa institutional website presents its philosophy, Institute, Studios, portfolio, journal and ways to contribute.
 
-## Pages
+Run the dependency-free build with:
 
-- Home: the parent vision and paths into the different initiatives.
-- Institute: exact mission/vision and learning, admissions and community enquiries.
-- Studios: the supplied creative identity and Safwa Quran project direction.
-- Safwa Quran: a clear introduction to a project in development.
-- Connect: a local message-preparation flow for the relevant Safwa Instagram account.
+```sh
+python3 scripts/build.py
+```
 
-## Build and hosting
+Render publishes `dist/` at https://thesafwa.onrender.com. Approved page bodies live in `content/pages/` and share `content/layout.html`. Page metadata and output routes are declared in `content/pages.json`. The build supplies public canonical metadata, a sitemap, and the existing HTML entry points alongside clean page routes.
 
-Run `python scripts/build.py`. Publish the `dist` directory. No dependency installation, database, runtime secrets or server process is needed. The production target is https://thesafwa.onrender.com. The approved public build includes canonical metadata, social sharing tags and a sitemap. The original Sites preview retains its private audience.
+The public release follows the reviewed institutional direction. Safwa OS remains a concept within Studios, Acquisition is upcoming, and Safwa Quran is described as a project in development. Editorial sections await reviewed publications.
 
-The enquiry form copies a message for the visitor to paste and send through Instagram. It does not send or store information. Admissions, scholarship applications and member accounts are outside this first version.
+The enquiry tool prepares an email on the visitor’s device. The visitor reviews and sends it through their email application. The production website serves static pages. Editorial accounts, database migrations and integration with the existing Vercel CMS are a separate review.
 
-The Connect page and shared footer include the approved WhatsApp and Telegram invitations. The five enhanced brand images are preserved byte-for-byte from the supplied JPEGs; SVG viewports frame the existing images without recompressing them.
-
-See [ART_DIRECTION.md](ART_DIRECTION.md) for asset provenance, content constraints and the design rationale.
+The supplied brand images and font licences are retained. See `ART_DIRECTION.md` for the original asset provenance.

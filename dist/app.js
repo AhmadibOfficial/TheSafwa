@@ -66,15 +66,31 @@
     quran: { name: 'Safwa Studios', handle: '@safwa.studios', url: 'https://www.instagram.com/safwa.studios/' },
     institute: { name: 'Safwa Institute', handle: '@safwa.institute', url: 'https://www.instagram.com/safwa.institute/' }
   };
-  const destinationFor = value => destinations[value] || destinations.institute;
+  const emailDelivery = form?.dataset.enquiryDelivery === 'email';
+  const emailTeams = {
+    general: { name: 'The Safwa', handle: 'admin.safwaco@gmail.com' },
+    partnerships: { name: 'The Safwa', handle: 'admin.safwaco@gmail.com' },
+    careers: { name: 'The Safwa', handle: 'admin.safwaco@gmail.com' },
+    ventures: { name: 'The Safwa', handle: 'admin.safwaco@gmail.com' },
+    media: { name: 'Safwa Studios', handle: 'adminsafwastudios@gmail.com' },
+    studios: { name: 'Safwa Studios', handle: 'adminsafwastudios@gmail.com' },
+    quran: { name: 'Safwa Studios', handle: 'adminsafwastudios@gmail.com' },
+    institute: { name: 'Safwa Institute', handle: 'admin.safwainstitute@gmail.com' }
+  };
+  const destinationFor = value => {
+    if (emailDelivery) return emailTeams[value] || emailTeams.institute;
+    return destinations[value] || destinations.institute;
+  };
   const chosen = new URLSearchParams(window.location.search).get('interest');
   if (interest && [...interest.options].some(option => option.value === chosen)) interest.value = chosen;
   const updateDestination = () => {
     if (!interest) return;
     const destination = destinationFor(interest.value);
     const accountLink = document.querySelector('#enquiry-instagram');
-    accountLink.href = destination.url;
-    accountLink.setAttribute('aria-label', `Open Instagram for ${destination.name} (opens in a new tab)`);
+    accountLink.href = emailDelivery ? `mailto:${destination.handle}` : destination.url;
+    accountLink.setAttribute('aria-label', emailDelivery
+      ? `Open email to ${destination.name}`
+      : `Open Instagram for ${destination.name} (opens in a new tab)`);
     document.querySelector('#enquiry-destination').textContent = `Your message is for ${destination.name} (${destination.handle}).`;
     feedback.textContent = '';
     document.querySelector('#copy-fallback').hidden = true;
@@ -90,17 +106,26 @@
     const topic = interest.selectedOptions[0].textContent;
     const destination = destinationFor(interest.value);
     const text = `Assalamu alaikum, ${destination.name}.\n\n${name ? `My name is ${name}.\n` : ''}I’m getting in touch about ${topic.toLowerCase()}.\n\n${message}`;
+    if (emailDelivery) {
+      const subject = `The Safwa enquiry · ${topic}`;
+      document.querySelector('#enquiry-instagram').href =
+        `mailto:${destination.handle}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+    }
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard not available');
       await navigator.clipboard.writeText(text);
-      feedback.textContent = `Message copied. Open Instagram, paste it into a message to ${destination.handle}, and send when you’re ready.`;
+      feedback.textContent = emailDelivery
+        ? 'Message prepared and copied. Open email to review and send it.'
+        : `Message copied. Open Instagram, paste it into a message to ${destination.handle}, and send when you’re ready.`;
     } catch {
       const fallback = document.querySelector('#copy-fallback');
       fallback.hidden = false;
       fallback.querySelector('textarea').value = text;
       fallback.querySelector('textarea').focus();
       fallback.querySelector('textarea').select();
-      feedback.textContent = 'Your message is ready below. Select and copy it, then open Instagram to send it.';
+      feedback.textContent = emailDelivery
+        ? 'Your message is ready below. Open email to review and send it.'
+        : 'Your message is ready below. Select and copy it, then open Instagram to send it.';
     }
   });
 

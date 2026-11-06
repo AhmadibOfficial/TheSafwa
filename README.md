@@ -30,4 +30,6 @@ Open `http://127.0.0.1:4173/editor` and leave the terminal running. The account 
 
 Read [the CMS operating guide](docs/SQLITE_CMS.md) for the publishing workflow, staff management, recovery, migration and persistent hosting requirements. CMS publishing requires the Python service; the current static deployment has not been switched.
 
+For authorized staff to review the CMS remotely while it stays on your computer, read [the local remote-access guide](docs/LOCAL_REMOTE_ACCESS.md). The commands `bash safwa remote-setup` and `bash safwa remote` require an explicit email allowlist, preserve CMS MFA, and keep the application bound to loopback. Remote access is off until the owner starts a session.
+
 The supplied brand images and font licences are retained. See `ART_DIRECTION.md` for the original asset provenance.

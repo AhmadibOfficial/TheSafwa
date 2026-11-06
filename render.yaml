@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: thesafwa-cms
+    runtime: python
+    repo: https://github.com/AhmadibOfficial/TheSafwa
+    branch: main
+    region: frankfurt
+    plan: 0.5c-512mb
+    numInstances: 1
+    autoDeployTrigger: "off"
+    healthCheckPath: /healthz
+    buildCommand: >-
+      python3 -m pip install --require-hashes --only-binary=:all: -r requirements.lock
+      && python3 scripts/build.py
+    startCommand: >-
+      python3 scripts/cms.py init
+      && exec python3 scripts/cms.py serve --host 0.0.0.0
+      --port "${PORT:-10000}" --origin "${RENDER_EXTERNAL_URL}"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.14"
+      - key: SAFWA_DATABASE
+        value: /var/data/safwa/cms.sqlite3
+    disk:
+      name: safwa-cms-data
+      mountPath: /var/data
+      sizeGB: 1

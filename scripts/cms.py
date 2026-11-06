@@ -27,6 +27,9 @@ def main():
     sub.add_parser('check', help='verify schema, data integrity and encryption key')
     local = sub.add_parser('local', help='start the loopback review server')
     local.add_argument('--port', type=int, default=PORT)
+    remote_setup = sub.add_parser('remote-setup', help='privately configure an email-restricted local review endpoint')
+    remote_setup.add_argument('--port', type=int, default=PORT)
+    sub.add_parser('remote', help='start an owner-controlled remote review session; ngrok must be installed')
     serve = sub.add_parser('serve', help='serve the application with Waitress')
     serve.add_argument('--origin', default=os.environ.get('SAFWA_ORIGIN'))
     serve.add_argument('--host', default='127.0.0.1')
@@ -69,6 +72,10 @@ def enrollment(uri):
 
 
 def run(args):
+    if args.command == 'remote-setup':
+        from packages.security import remote_access
+        remote_access.configure(args.port)
+        return
     if args.command == 'backup':
         store.copy_database(args.database, args.destination)
         print('Database and image backup verified. Keep cms.key in a separate protected backup.')
@@ -99,6 +106,9 @@ def run(args):
                 server.serve_forever()
             except KeyboardInterrupt:
                 pass
+    elif args.command == 'remote':
+        from packages.security import remote_access
+        remote_access.launch(args.database)
     elif args.command == 'serve':
         if not args.origin:
             raise Invalid('Set --origin or SAFWA_ORIGIN to the exact public origin.')

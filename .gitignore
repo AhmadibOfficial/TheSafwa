@@ -43,3 +43,10 @@ client-data/
 venv/
 .pytest_cache/
 *.pyc
+*.sqlite3
+*.sqlite3-*
+*.sqlite
+*.db
+*.db-*
+*.key
+.runtime/

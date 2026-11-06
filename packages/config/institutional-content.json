@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "activity",
+    "arm": "institute",
+    "slug": "arabic-club",
+    "title": "Arabic Club",
+    "status": "ongoing",
+    "media": "",
+    "summary": "A weekly circle for learning Arabic together.",
+    "body": "The Institute runs a weekly Arabic Club circle. Contact the Institute for the current schedule and how to take part."
+  },
+  {
+    "kind": "activity",
+    "arm": "institute",
+    "slug": "study-sessions",
+    "title": "Study sessions",
+    "status": "ongoing",
+    "media": "",
+    "summary": "Regular spaces for study and discussion.",
+    "body": "Study sessions are part of the Institute’s current work. Ask the Institute what is being studied and how to join a session."
+  },
+  {
+    "kind": "activity",
+    "arm": "institute",
+    "slug": "faith-centred-programmes",
+    "title": "Faith-centred programmes",
+    "status": "previous",
+    "media": "",
+    "summary": "Online programmes in faith-centred personal development.",
+    "body": "The Institute has organised online programmes that connect faith with personal development. Contact the Institute for current programme information."
+  },
+  {
+    "kind": "project",
+    "arm": "studios",
+    "slug": "safwa-quran",
+    "title": "Safwa Quran",
+    "status": "development",
+    "media": "",
+    "summary": "A digital project centred on the Qur’an, reflection and daily practice.",
+    "body": "Safwa Studios is developing Safwa Quran to make room for the Qur’an and reflection in everyday life. Contact the Studios for project enquiries."
+  }
+]

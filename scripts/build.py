@@ -30,8 +30,8 @@ def clean_link(match):
     return 'href="' + CLEAN_LINKS.get(parts[0], parts[0]) + "".join(parts[1:]) + '"'
 
 
-def metadata(page):
-    url = ORIGIN + page["path"]
+def metadata(page, origin=ORIGIN):
+    url = origin + page["path"]
     title = escape(page["title"], quote=True)
     description = escape(page["description"], quote=True)
     theme = "#102c24" if page["theme"] else "#f7f4ed"
@@ -43,7 +43,7 @@ def metadata(page):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{ORIGIN}/assets/the-safwa-logo-hd.jpg">
+<meta property="og:image" content="{origin}/assets/the-safwa-logo-hd.jpg">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="{CSP}">"""
 

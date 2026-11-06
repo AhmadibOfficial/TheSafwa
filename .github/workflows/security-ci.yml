@@ -30,6 +30,8 @@ jobs:
       - name: Run repository secret and sensitive-file gate
         run: python3 scripts/ai_security_preflight.py --tracked
       - name: Test security gate
+        run: python3 -m pip install --require-hashes --only-binary=:all: -r requirements.lock
+      - name: Test CMS and confidentiality controls
         run: python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Verify site build
         run: python3 scripts/build.py
